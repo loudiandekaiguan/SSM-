@@ -3,10 +3,10 @@ package entity;
 import java.io.Serializable;
 import java.util.List;
 
-public class PageResult implements Serializable {
+public class PageResult<T> implements Serializable {
     private long total;
-    private List rows;
-    public PageResult(long total, List rows){
+    private List<T> rows;
+    public PageResult(long total, List<T> rows){
         super();
         this.total = total;
         this.rows = rows;
@@ -20,11 +20,11 @@ public class PageResult implements Serializable {
         this.total = total;
     }
 
-    public List getRows() {
+    public List<T> getRows() {
         return rows;
     }
 
-    public void setRows(List rows) {
+    public void setRows(List<T> rows) {
         this.rows = rows;
     }
 }
