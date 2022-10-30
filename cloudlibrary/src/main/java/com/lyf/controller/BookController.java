@@ -18,11 +18,9 @@ public class BookController {
         int pageNum = 1;
         int pageSize = 5;
         PageResult pageResult = bookService.selectNewBooks(pageNum, pageSize);
-//        System.out.println(pageResult);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/admin/books_new.jsp");
         modelAndView.addObject("pageResult", pageResult);
-//        System.out.println(modelAndView);
         return modelAndView;
 
     }
